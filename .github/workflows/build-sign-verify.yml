@@ -83,12 +83,12 @@ jobs:
       run: |
         ./bin/sigstore.js sign sigstore-0.0.0.tgz > artifact.sig
     - name: Archive package
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: package
         path: sigstore-0.0.0.tgz
     - name: Archive signature
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: signature
         path: artifact.sig
